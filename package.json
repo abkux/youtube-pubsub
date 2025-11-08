@@ -20,6 +20,6 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "send-discord-webhook": "^0.1.2"
+    "resend": "^6.4.2"
   }
 }

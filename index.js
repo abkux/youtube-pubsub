@@ -10,7 +10,11 @@ const SERVER_PORT = process.env.PORT;
 const app = express();
 app.use(express.text({ type: 'application/atom+xml' }));
 
-app.get('/webhook', (req, res) => {
+app.get('/', async(req, res) => {
+    res.status(200).json({"message": "OK"})
+})
+
+app.get('/webhook', async(req, res) => {
     res.status(200).send(req.query['hub.challenge']);
 });
 
